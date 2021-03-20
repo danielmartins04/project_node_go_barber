@@ -6,16 +6,19 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity('appointments')
-class Appointment {
+@Entity('users')
+class User {
   @PrimaryGeneratedColumn()
   id: string;
 
   @Column()
-  provider: string;
+  name: string;
 
   @Column()
-  date: Date;
+  email: string;
+
+  @Column()
+  password: string;
 
   @CreateDateColumn()
   // eslint-disable-next-line camelcase
@@ -26,4 +29,4 @@ class Appointment {
   updated_at: Date;
 }
 
-export default Appointment;
+export default User;
