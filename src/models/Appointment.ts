@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import {
   Entity,
   Column,
@@ -12,11 +13,10 @@ import User from './User';
 
 @Entity('appointments')
 class Appointment {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column()
-  // eslint-disable-next-line camelcase
   provider_id: string;
 
   @ManyToOne(() => User)
@@ -27,7 +27,6 @@ class Appointment {
   date: Date;
 
   @CreateDateColumn()
-  // eslint-disable-next-line camelcase
   created_at: Date;
 
   @UpdateDateColumn()
