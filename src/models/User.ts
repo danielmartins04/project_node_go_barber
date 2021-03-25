@@ -20,6 +20,9 @@ class User {
   @Column()
   password: string;
 
+  @Column()
+  avatar: string;
+
   @CreateDateColumn()
   // eslint-disable-next-line camelcase
   created_at: Date;
